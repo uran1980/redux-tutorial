@@ -1,32 +1,32 @@
 redux-tutorial
 =========================
 
-This repository contains a step by step tutorial to help grasp flux and more specifically [Redux](https://github.com/rackt/redux).
+Этот репозитарий содержит пошаговый обучающий курс созданный специально для изучения принципов Flux и особенно [Redux](https://github.com/rackt/redux).
 
-The official and very exhaustive Redux documentation is available [here](http://redux.js.org/) and should be your number one source of truth regarding Redux. The present tutorial will only offer you an introduction to flux concepts through Redux use. For further or more detailed info, please refer to the Redux documentation.
+Официальная и очень подробная документация по Redux доступна [здесь](http://redux.js.org/). Она должна стать Вашим основным источником правды при изучении принципов Redux.
 
-### Prerequisites
-It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly understand some of the examples given in this repo. Also be aware that this tutorial targets redux 3.0.2 and react-redux 4.0.0.
+### Замечания
+При изучении данного курса Вам необходимо иметь представление о новом синтаксисе ES6 и ES7, чтобы правильно понимать приведенные далее примеры. Также учтите что этот курс основан на redux 3.0.2 и react-redux 4.0.0.
 
-### Clone the repository
+### Клонируйте репозитарий
 `git clone https://github.com/happypoulp/redux-tutorial.git`
 
-### Move into repository
+### Перейдите в репозитарий
 `cd redux-tutorial`
 
-### Install dependencies
+### Установите необходимые зависимости
 `npm install`
 
-### Browse the tutorial
-
-This tutorial is split into a sequence of javascript files that are intended to be read in order. 
+### Просмотрт курса
+Этот обучающий курс разбит на куски javascript файлов, которые необходимо будет изучать последовательно друг за другом.
 
 Start with the first tutorial: [Introduction](00_introduction.js)
 
-### Run an example
+Начните с первого урока: [Знакомство](00_introduction.js)
 
-Being real js files, each example can be run to verify that it works as intended or to do your own experiments:
+### Как запускать примеры из уроков
+Каждый пример данного курса является реальным js файлом, который можно выполнять для проверки что пример действительно рабочий, или для выполнения Ваших собственных експериметов в ходе обучения:
 
 `npm run example 01_simple-action-creator.js`
 
-Enjoy!
+Успехов в обучении!
