@@ -1,37 +1,42 @@
-// Tutorial 0 - introduction.js
+// Урок 0 (Начало) - introduction.js
 
-// Why this tutorial?
-// While trying to learn Redux, I realized that I had accumulated incorrect knowledge about flux through
-// articles I read and personal experience. I don't mean that articles about flux are not well written
-// but I just didn't grasp concepts correctly. In the end, I was just applying documentation of different
-// flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read
-// about (actions / actions creators, store, dispatcher, etc).
-// Only when I started using Redux did I realize that flux is more simple than I thought. This is all
-// thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced
-// by other frameworks I tried before. I now feel that Redux is a much better way to learn about flux
-// than many other frameworks. That's why I want now to share with everyone, using my own words,
-// flux concepts that I am starting to grasp, focusing on the use of Redux.
+// Почему именно этот обучающий курс?
 
-// You may have seen this diagram representing the famous unidirectional data flow of a flux application:
+// Когда я сам пытался изучать Redux, Я стал осознавать, что в моей голове накапливаются некорректные знания о flux
+// взятые из сторонних статей и моего собственного опыта его использования. Я не утверждаю что все статьи о flux
+// плохо написаны, но изучая все попадавшиеся мне статьи я все больше и больше неверно понимал концепции flux.
+
+// В конце концов я стал просто применять то что описано в документация к различным flux фреймворкам 
+// (Reflux, Flummox, FB Flux) и пататься приспособить их к теоретическим концепциям, которые я изучал о
+// (действиях {actions} / родителях действий {actions creators}, хранилищах {store}, диспетчерах {dispatcher} и т.д.).
+//
+// Только когда я начал использовать Redux, я понял что на самом деле flux намного проще чем я предполагал.
+// Все это благодаря хорошо оформленному архитектурному дизайну самого Redux, в котором убраны излишние компоненты
+// присущие остальным фреймворкам. Таким образом на данный момент Redux самый лучший путь к изуению принципов flux.
+// Вот почему я захотел поделится своим опытом со всеми, кто только начинает изучение flux.
+
+// На диаграмме ниже Вы можете видеть классическое представление потока данных flux приложения:
 
 /*
-                 _________               ____________               ___________
-                |         |             |            |             |           |
-                | Action  |------------▶| Dispatcher |------------▶| callbacks |
-                |_________|             |____________|             |___________|
-                     ▲                                                   |
-                     |                                                   |
-                     |                                                   |
- _________       ____|_____                                          ____▼____
-|         |◀----|  Action  |                                        |         |
-| Web API |     | Creators |                                        |  Store  |
-|_________|----▶|__________|                                        |_________|
-                     ▲                                                   |
-                     |                                                   |
-                 ____|________           ____________                ____▼____
-                |   User       |         |   React   |              | Change  |
-                | interactions |◀--------|   Views   |◀-------------| events  |
-                |______________|         |___________|              |_________|
+                 __________               ______________              ______________
+                |          |             |              |             |             |
+                | Действие |             |  Диспетчер   |             |   колбэки   |
+                | (Action) |------------▶| (Dispatcher) |------------▶| (callbacks) |
+                |__________|             |______________|             |_____________|
+                     ▲                                                      |
+                     |                                                      |
+                     |                                                      |
+ _________       ____|_____                                           ______▼_____
+|         |◀----|          |                                          |           |
+|         |     |  Action  |                                          | Хранилище |
+| Web API |     | Creators |                                          |  (Store)  |
+|_________|----▶|__________|                                          |___________|
+                     ▲                                                      |
+                     |                                                      |
+                 ____|_________           ___________                   ____▼____
+                |     User     |         |   React   |                 | Change  |
+                | interactions |◀--------|   Views   |◀----------------| events  |
+                |______________|         |___________|                 |_________|
 
 */
 
